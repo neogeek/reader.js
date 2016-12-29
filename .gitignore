@@ -1,0 +1,5 @@
+node_modules/
+
+temp/
+
+static/js/app.min.js

@@ -1,0 +1,9 @@
+{
+    "feeds": [
+        "https://www.theverge.com/rss/index.xml",
+        "https://www.polygon.com/rss/index.xml",
+        "https://www.designernews.co/?format=rss",
+        "https://news.ycombinator.com/rss",
+        "https://daringfireball.net/feeds/main"
+    ]
+}
