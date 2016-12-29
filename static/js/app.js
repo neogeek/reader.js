@@ -94,6 +94,12 @@ firebase.auth().onAuthStateChanged(user => {
         firebase.auth().signInWithPopup(provider)
             .catch(error => {
 
+                if (error.code === 'auth/popup-blocked') {
+
+                    firebase.auth().signInWithRedirect(provider);
+
+                }
+
                 console.log(error);
 
             });
