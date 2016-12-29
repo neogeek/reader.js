@@ -11,7 +11,9 @@ app.use(express.static(`${__dirname}/static`));
 
 app.get('/feed', (req, res) => {
 
-    raspar.fetch(feeds)
+    raspar.fetch(feeds, {
+        'ttl': 300
+    })
         .then(response =>
             Promise.all(response.map(contents =>
                 convert.convertFeedFromXMLtoJSON(contents)))
