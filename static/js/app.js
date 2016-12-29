@@ -67,8 +67,6 @@ firebase.auth().onAuthStateChanged(user => {
 
     if (user) {
 
-        const database = firebase.database();
-
         firebase.database().ref(`viewed/${user.uid}`)
             .once('value')
             .then(items => {
