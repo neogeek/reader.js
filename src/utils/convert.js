@@ -1,3 +1,5 @@
+const url = require('url');
+
 const crypto = require('crypto');
 
 const {parseString} = require('xml2js');
@@ -26,6 +28,7 @@ const convertFeedFromXMLtoJSON = response => new Promise((resolve, reject) => {
                     hash,
                     link,
                     'origin': response.request.uri.href,
+                    'site': url.parse(link).hostname,
                     'title': entry.title[0]
                 };
 
@@ -45,6 +48,7 @@ const convertFeedFromXMLtoJSON = response => new Promise((resolve, reject) => {
                     hash,
                     link,
                     'origin': response.request.uri.href,
+                    'site': url.parse(link).hostname,
                     'title': item.title[0]
                 };
 
