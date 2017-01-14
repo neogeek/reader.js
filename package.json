@@ -7,12 +7,12 @@
   "dependencies": {
     "express": "4.14.0",
     "raspar": "1.1.0",
-    "spire-of-babel": "1.1.18",
+    "spire-of-babel": "1.1.19",
     "xml2js": "0.4.17"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "1.10.0",
-    "eslint": "3.12.2"
+    "@neogeek/eslint-config-standards": "1.11.0",
+    "eslint": "3.13.1"
   },
   "scripts": {
     "start": "node web.js",
