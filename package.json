@@ -18,6 +18,7 @@
   "scripts": {
     "start": "node web.js",
     "postinstall": "npm run build",
+    "test": "eslint .",
     "build": "npm run build:javascript",
     "build:javascript": "spire-of-babel static/js/app.js --minify --output static/js/app.min.js"
   },

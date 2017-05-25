@@ -1,5 +1,12 @@
 {
   "extends": [
     "@neogeek/eslint-config-standards"
-  ]
+  ],
+  "rules": {
+    "id-length": 0,
+    "no-console": 0,
+    "no-undef": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": 0
+  }
 }

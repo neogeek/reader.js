@@ -56,7 +56,7 @@ const convertFeedFromXMLtoJSON = response => new Promise((resolve, reject) => {
 
         }
 
-        return reject('Invalid XML/RSS feed.');
+        return reject(new Error('Invalid XML/RSS feed.'));
 
     });
 

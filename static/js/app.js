@@ -1,7 +1,3 @@
-/* eslint no-console: 0 */
-/* eslint no-undef: 0 */
-/* eslint no-param-reassign: 0 */
-/* eslint no-unused-vars: 0 */
 
 const renderFeedView = viewed => {
 
