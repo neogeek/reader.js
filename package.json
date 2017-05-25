@@ -6,14 +6,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "express": "4.15.2",
+    "express": "4.15.3",
     "raspar": "1.1.1",
-    "spire-of-babel": "1.2.3",
+    "spire-of-babel": "1.2.4",
     "xml2js": "0.4.17"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "^1.15.0",
-    "eslint": "^3.18.0"
+    "eslint": "^3.19.0"
   },
   "scripts": {
     "start": "node web.js",
