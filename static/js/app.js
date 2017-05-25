@@ -1,3 +1,6 @@
+const $ = require('jquery');
+const Handlebars = require('handlebars');
+const firebase = require('firebase');
 
 const renderFeedView = viewed => {
 

@@ -7,8 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.15.3",
+    "firebase": "4.0.0",
+    "handlebars": "4.0.10",
+    "jquery": "3.2.1",
     "raspar": "1.1.1",
     "spire-of-babel": "1.2.4",
+    "uglify-js": "3.0.11",
     "xml2js": "0.4.17"
   },
   "devDependencies": {
@@ -19,8 +23,8 @@
     "start": "node web.js",
     "postinstall": "npm run build",
     "test": "eslint .",
-    "build": "npm run build:javascript",
-    "build:javascript": "spire-of-babel static/js/app.js --minify --output static/js/app.min.js"
+    "build": "npm run build:js",
+    "build:js": "spire-of-babel static/js/app.js --bundle | uglifyjs --compress --mangle > static/js/app.min.js"
   },
   "private": true
 }
