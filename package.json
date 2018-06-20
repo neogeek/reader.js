@@ -7,13 +7,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.15.3",
-    "firebase": "4.1.1",
+    "firebase": "4.5.1",
     "handlebars": "4.0.10",
     "jquery": "3.2.1",
     "raspar": "1.1.1",
     "spire-of-babel": "1.3.0",
     "uglify-js": "3.0.15",
-    "xml2js": "0.4.17"
+    "xml2js": "0.4.17",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "^1.15.0",
@@ -24,7 +25,10 @@
     "postinstall": "npm run build",
     "test": "eslint .",
     "build": "npm run build:js",
-    "build:js": "spire-of-babel static/js/app.js --bundle | uglifyjs --compress --mangle > static/js/app.min.js"
+    "build:js": "spire-of-babel static/js/app.js --bundle | uglifyjs --compress --mangle > static/js/app.min.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
