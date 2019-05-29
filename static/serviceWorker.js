@@ -6,21 +6,20 @@ const cachedFiles = [
     '/css/styles.css',
     '/images/icons.png',
     '/images/spinner.gif',
-    '/js/app.min.js'
+    '/js/app.js'
 ];
 
 const networkFiles = ['/feed', 'https://www.googleapis.com/'];
 
 self.addEventListener('install', event => {
-
     console.log('[pwa install]');
 
-    event.waitUntil(caches.open(cacheVersion).then(cache => cache.addAll(cachedFiles)));
-
+    event.waitUntil(
+        caches.open(cacheVersion).then(cache => cache.addAll(cachedFiles))
+    );
 });
 
 self.addEventListener('activate', event => {
-
     console.log('[pwa activate]');
 
     event.waitUntil(
@@ -29,40 +28,39 @@ self.addEventListener('activate', event => {
             .then(keys =>
                 Promise.all(
                     keys
-                        .filter(key => key.indexOf(cacheName) === 0 && key !== cacheVersion)
+                        .filter(
+                            key =>
+                                key.indexOf(cacheName) === 0 &&
+                                key !== cacheVersion
+                        )
                         .map(key => caches.delete(key))
                 )
             )
     );
 
     return self.clients.claim();
-
 });
 
 self.addEventListener('fetch', event => {
-
     if (networkFiles.filter(item => event.request.url.match(item)).length) {
-
         console.log('[network fetch]', event.request.url);
 
         event.respondWith(
-            caches.match(event.request).then(response => response || fetch(event.request))
+            caches
+                .match(event.request)
+                .then(response => response || fetch(event.request))
         );
-
     } else {
-
         console.log('[pwa fetch]', event.request.url);
 
         event.respondWith(
             caches.match(event.request).then(response => {
-
-                caches.open(cacheVersion).then(cache => cache.add(event.request.url));
+                caches
+                    .open(cacheVersion)
+                    .then(cache => cache.add(event.request.url));
 
                 return fetch(event.request).catch(() => response);
-
             })
         );
-
     }
-
 });
