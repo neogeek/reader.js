@@ -10,7 +10,8 @@
     "handlebars": "4.1.2",
     "raspar": "1.1.2",
     "restify": "8.3.2",
-    "xml2js": "0.4.19"
+    "xml2js": "0.4.19",
+    "snyk": "^1.168.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "4.2.0",
@@ -18,7 +19,10 @@
   },
   "scripts": {
     "start": "node web.js",
-    "test": "eslint ."
+    "test": "eslint .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
