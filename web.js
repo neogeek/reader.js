@@ -9,7 +9,8 @@ const convert = require('./src/utils/convert');
 server.get(
     '/*',
     restify.plugins.serveStatic({
-        directory: './static'
+        directory: './static',
+        default: 'index.html'
     })
 );
 
