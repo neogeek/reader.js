@@ -20,18 +20,6 @@ document.querySelector('a[href="#reload"]').addEventListener('click', e => {
     window.location.reload();
 });
 
-document
-    .querySelector('a[href="#markallasread"]')
-    .addEventListener('click', e => {
-        event.preventDefault();
-
-        firebase
-            .database()
-            .ref(`viewed/${firebase.auth().currentUser.uid}`)
-            .set(stories.map(story => story.hash))
-            .then(() => window.location.reload());
-    });
-
 const renderError = message => {
     htmlElem.classList.remove('loading');
 
@@ -51,9 +39,21 @@ const loadFeed = viewed => {
 
     fetch('/feed')
         .then(res => res.json())
-        .then(stories =>
-            stories.filter(story => viewed.indexOf(story.hash) === -1)
-        )
+        .then(stories => {
+            document
+                .querySelector('a[href="#markallasread"]')
+                .addEventListener('click', e => {
+                    event.preventDefault();
+
+                    firebase
+                        .database()
+                        .ref(`viewed/${firebase.auth().currentUser.uid}`)
+                        .set(stories.map(story => story.hash))
+                        .then(() => window.location.reload());
+                });
+
+            return stories.filter(story => viewed.indexOf(story.hash) === -1);
+        })
         .then(renderFeed)
         .catch(() => {
             renderError('Error processing request.');
