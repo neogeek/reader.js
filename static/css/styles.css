@@ -1,10 +1,12 @@
 * {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Arial',
+        sans-serif;
     font-size: 1em;
     line-height: 1.3em;
     color: #333;
@@ -38,7 +40,7 @@ header a {
 
 header .logo {
     float: left;
-    padding: .85em .6em;
+    padding: 0.85em 0.6em;
     font-size: 1.6em;
     color: #fff;
     text-decoration: none;
@@ -47,14 +49,14 @@ header .logo {
 
 header .menu-toggle {
     float: right;
-    margin: .75em;
-    padding: .25em .35em;
+    margin: 0.75em;
+    padding: 0.25em 0.35em;
     font-size: 1.35em;
     line-height: 1em;
     color: #fff;
     text-decoration: none;
     background: #444;
-    border-radius: .2em;
+    border-radius: 0.2em;
 }
 
 header nav ul {
@@ -63,13 +65,17 @@ header nav ul {
     background: #444;
 }
 
+header nav ul.visible {
+    display: block;
+}
+
 header nav ul li {
     list-style: none;
 }
 
 header nav ul li a {
     display: block;
-    padding: .8em 1em;
+    padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
 }
@@ -86,13 +92,13 @@ header nav ul li a:hover {
 
 .feed {
     margin-top: 2.5em;
-    padding: .8em;
+    padding: 0.8em;
     font-size: 1.3em;
     line-height: 1.3em;
 }
 
 .feed .story {
-    padding: .4em 0;
+    padding: 0.4em 0;
     position: relative;
     list-style: none;
 }
@@ -102,7 +108,7 @@ header nav ul li a:hover {
 }
 
 .feed .story .site a {
-    font-size: .75em;
+    font-size: 0.75em;
     line-height: 1em;
     color: #666;
 }
@@ -110,26 +116,26 @@ header nav ul li a:hover {
 .feed .story .icon {
     content: '';
     display: inline-block;
-    margin: 0 .25em 0 0;
+    margin: 0 0.25em 0 0;
     width: 16px;
     height: 16px;
     background: url('/images/icons.png') no-repeat;
     background-size: 16px 80px;
 }
 
-.feed .story[data-origin*="theverge.com"] .icon {
+.feed .story[data-origin*='theverge.com'] .icon {
     background-position: 0 -16px;
 }
 
-.feed .story[data-origin*="polygon.com"] .icon {
+.feed .story[data-origin*='polygon.com'] .icon {
     background-position: 0 -32px;
 }
 
-.feed .story[data-origin*="daringfireball.net"] .icon {
+.feed .story[data-origin*='daringfireball.net'] .icon {
     background-position: 0 -48px;
 }
 
-.feed .story[data-origin*="designernews.co"] .icon {
+.feed .story[data-origin*='designernews.co'] .icon {
     background-position: 0 -64px;
 }
 
