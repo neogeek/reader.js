@@ -2,19 +2,19 @@
   "name": "reader.js",
   "description": "Reader.js is a simple inbox-zero feed reader built to work on Heroku.",
   "engines": {
-    "node": ">=8.0"
+    "node": ">=11.0"
   },
   "license": "MIT",
   "dependencies": {
-    "firebase": "6.1.0",
-    "handlebars": "4.1.2",
+    "firebase": "6.4.0",
     "raspar": "1.1.2",
-    "restify": "8.3.2",
+    "restify": "8.4.0",
     "xml2js": "0.4.19"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "4.2.0",
-    "eslint": "5.16.0"
+    "babel-eslint": "10.0.2",
+    "eslint": "6.2.1"
   },
   "scripts": {
     "start": "node web.js",

@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "@neogeek/eslint-config-standards"
-  ],
+  "extends": ["@neogeek/eslint-config-standards"],
   "rules": {
     "id-length": 0,
     "no-console": 0,
