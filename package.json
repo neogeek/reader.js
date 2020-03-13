@@ -6,15 +6,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "firebase": "6.4.0",
-    "raspar": "1.1.2",
-    "restify": "8.4.0",
-    "xml2js": "0.4.19"
+    "firebase": "7.11.0",
+    "raspar": "2.0.0",
+    "restify": "8.5.1",
+    "xml2js": "0.4.23"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "4.2.0",
-    "babel-eslint": "10.0.2",
-    "eslint": "6.2.1"
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0"
   },
   "scripts": {
     "start": "node web.js",
