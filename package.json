@@ -2,7 +2,7 @@
   "name": "reader.js",
   "description": "Reader.js is a simple inbox-zero feed reader built to work on Heroku.",
   "engines": {
-    "node": ">=11.0"
+    "node": ">=12.0"
   },
   "license": "MIT",
   "dependencies": {
