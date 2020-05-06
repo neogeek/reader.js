@@ -9,7 +9,8 @@
     "firebase": "6.4.0",
     "raspar": "1.1.2",
     "restify": "8.4.0",
-    "xml2js": "0.4.19"
+    "xml2js": "0.4.19",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "4.2.0",
@@ -18,7 +19,10 @@
   },
   "scripts": {
     "start": "node web.js",
-    "test": "eslint ."
+    "test": "eslint .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
