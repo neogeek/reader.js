@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "firebase": "6.4.0",
-    "raspar": "1.1.2",
+    "raspar": "2.0.0",
     "restify": "8.4.0",
     "xml2js": "0.4.19"
   },
