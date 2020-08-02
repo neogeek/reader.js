@@ -11,14 +11,8 @@
     "restify": "8.5.1",
     "xml2js": "0.4.23"
   },
-  "devDependencies": {
-    "@neogeek/eslint-config-standards": "4.2.0",
-    "babel-eslint": "10.1.0",
-    "eslint": "6.8.0"
-  },
   "scripts": {
-    "start": "node web.js",
-    "test": "eslint ."
+    "start": "node web.js"
   },
   "private": true
 }
