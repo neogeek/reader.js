@@ -3,7 +3,7 @@ const feedElem = document.querySelector('.feed');
 const navElem = document.querySelector('nav ul');
 
 const renderStory = ({ hash, origin, link, title, site }) =>
-    `<li class="story" data-hash="${hash}" data-origin="${origin}">
+    `<li class="story" data-hash="${hash}" data-origin="${link}">
   <span class="icon"></span>
   <a href="${link}" target="_blank">${title}</a>
   <i class="site"><a href="http://${site}" target="_blank">${site}</a></i>
