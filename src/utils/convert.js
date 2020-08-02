@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 const { parseString } = require('xml2js');
 
-const parseFormatFeed = (response, result) =>
+const parseFormatFeed = result =>
     result.feed.entry.map(entry => {
         const link = entry.link[0].$.href;
 
@@ -13,7 +13,6 @@ const parseFormatFeed = (response, result) =>
         return {
             hash,
             link,
-            origin: response.request.uri.href,
             site: url.parse(link).hostname,
             title: entry.title[0]
         };
