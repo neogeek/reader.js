@@ -27,4 +27,4 @@ server.get('/feed', (req, res) => {
         .then(final => res.send([].concat(...final)));
 });
 
-server.listen(process.env.PORT || '5000');
+server.listen(process.env.PORT || 5000);
