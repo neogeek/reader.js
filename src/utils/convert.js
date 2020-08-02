@@ -39,8 +39,6 @@ const convertFeedFromXMLtoJSON = response =>
                 return reject(err);
             }
 
-            console.log(result);
-
             if (result && result.feed && result.feed.entry) {
                 resolve(parseFormatFeed(result));
             } else if (
